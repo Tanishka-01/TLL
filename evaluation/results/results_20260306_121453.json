@@ -1,0 +1,71 @@
+[
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "method": "always_cloud",
+    "queries_sent_to_cloud": 10,
+    "queries_kept_local": 0,
+    "adversary_guess": {
+      "topic": "Investigative journalism story on a politician or government contractor",
+      "topic_confidence": "HIGH",
+      "target": "Senator Williams or an entity related to him (Acme Corp)",
+      "target_confidence": "MEDIUM",
+      "location": "Georgetown, Washington D.C., U.S.A.",
+      "location_confidence": "HIGH",
+      "time": "Unknown (cannot determine specific time from queries)",
+      "time_confidence": "LOW",
+      "source_or_client": "Confidential journalist or their source",
+      "source_or_client_confidence": "MEDIUM",
+      "reasoning": "The queries cover topics related to a politician's actions, activities of an organization involved in government contracts, and secure communication practices for journalists. Georgetown is mentioned as a location for dining, possibly indicating the location of the journalist or relevance to the story. Encryption and source protection are important considerations in investigative journalism."
+    },
+    "reconstruction_score": 0.34,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  },
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "method": "threshold",
+    "queries_sent_to_cloud": 8,
+    "queries_kept_local": 2,
+    "adversary_guess": {
+      "topic": "Data Security and Privacy",
+      "topic_confidence": "MEDIUM",
+      "target": "Journalist's Own Work",
+      "target_confidence": "HIGH",
+      "location": "Cloud AI Service",
+      "location_confidence": "HIGH",
+      "time": "Unclear (Possibly Present)",
+      "time_confidence": "LOW",
+      "source_or_client": "Journalist",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The journalist is ensuring data security by learning how to encrypt files, which could indicate that they are working on a project involving sensitive information."
+    },
+    "reconstruction_score": 0.0,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  },
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "method": "tll",
+    "queries_sent_to_cloud": 6,
+    "queries_kept_local": 4,
+    "adversary_guess": {
+      "topic": "Investigative journalism project",
+      "topic_confidence": "HIGH",
+      "target": "Senator Williams and potential Senate ethics violations",
+      "target_confidence": "HIGH",
+      "location": "Washington D.C. area (Georgetown specifically)",
+      "location_confidence": "MEDIUM",
+      "time": "Unknown, possibly ongoing or about to be published",
+      "time_confidence": "NONE",
+      "source_or_client": "A journalist working on a story",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The queries cover topics related to secure communication, leaked documents, and Senator Williams' committee assignments, all of which are relevant to an investigative journalism project. The location-specific query about restaurants in Georgetown suggests the journalist might be based there or focusing on events happening in that area. Encryption techniques and verifying document authenticity imply they're preparing for a potential story release."
+    },
+    "reconstruction_score": 0.34,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  }
+]

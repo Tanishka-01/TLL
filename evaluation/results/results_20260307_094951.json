@@ -1,0 +1,25 @@
+[
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "method": "tll",
+    "queries_sent_to_cloud": 2,
+    "queries_kept_local": 8,
+    "adversary_guess": {
+      "topic": null,
+      "topic_confidence": "NONE",
+      "target": null,
+      "target_confidence": "NONE",
+      "location": null,
+      "location_confidence": "NONE",
+      "time": null,
+      "time_confidence": "NONE",
+      "source_or_client": null,
+      "source_or_client_confidence": "NONE",
+      "reasoning": null
+    },
+    "reconstruction_score": 0.0,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  }
+]

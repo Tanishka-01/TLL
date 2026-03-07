@@ -1,0 +1,24 @@
+{
+  "id": "researcher_startup_idea",
+  "profile": "Researcher",
+  "description": "University researcher secretly negotiating with VCs to spin off lab research without disclosing to university",
+  "secret": {
+    "topic": "Stealth startup spinoff from university AI lab research",
+    "target": "Sequoia Capital and Andreessen Horowitz",
+    "location": null,
+    "time": "Term sheet expected within 6 weeks",
+    "source_or_client": null
+  },
+  "queries": [
+    "University IP ownership policies for federally funded research",
+    "How to structure startup equity when spinning off academic research",
+    "Our protein folding model outperforms AlphaFold on novel targets by 23 percent",
+    "Conflict of interest disclosure requirements for NSF grant recipients",
+    "Sequoia Capital and a16z life sciences investment focus 2024",
+    "Bayh-Dole Act implications for commercializing federally funded discoveries",
+    "Term sheet negotiation strategies for deep tech startups",
+    "How other researchers have navigated university IP conflicts in spinoffs",
+    "We are in talks with two top tier VCs for Series A",
+    "Delaware C-corp formation before university disclosure timeline"
+  ]
+}

@@ -1,0 +1,71 @@
+[
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "method": "always_cloud",
+    "queries_sent_to_cloud": 10,
+    "queries_kept_local": 0,
+    "adversary_guess": {
+      "topic": "Adolescent mental health assessment and treatment",
+      "topic_confidence": "HIGH",
+      "target": "Jamie Chen (a 16-year-old patient)",
+      "target_confidence": "HIGH",
+      "location": "N/A (information suggests remote access to cloud AI service)",
+      "location_confidence": "LOW",
+      "time": "This week",
+      "time_confidence": "MEDIUM",
+      "source_or_client": "Healthcare professional or institution working with adolescent patients",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The queries cover various aspects of diagnosing and treating adolescent mental health issues, specifically focusing on Jamie Chen, a 16-year-old patient with active suicidal ideation. This suggests that the healthcare professional or institution is working to assess and treat this patient's needs, while also potentially researching best practices for their work. The time frame provided (this week) also implies that there is some urgency in addressing these issues."
+    },
+    "reconstruction_score": 0.425,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  },
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "method": "threshold",
+    "queries_sent_to_cloud": 5,
+    "queries_kept_local": 5,
+    "adversary_guess": {
+      "topic": "Adolescent depression and related mental healthcare services",
+      "topic_confidence": "HIGH",
+      "target": "Adolescents suffering from depression",
+      "target_confidence": "HIGH",
+      "location": "Healthcare facilities, potentially in Boston area (Boston Children's Hospital)",
+      "location_confidence": "MEDIUM",
+      "time": "Unknown, as no specific time frame is mentioned",
+      "time_confidence": "LOW",
+      "source_or_client": "An intelligence analyst or healthcare professional working for a healthcare organization",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The queries focus on adolescent depression and related services. The Boston Children's Hospital mention suggests a possible location. No information regarding time is provided."
+    },
+    "reconstruction_score": 0.175,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  },
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "method": "tll",
+    "queries_sent_to_cloud": 3,
+    "queries_kept_local": 7,
+    "adversary_guess": {
+      "topic": "Adolescent Mental Health Research",
+      "topic_confidence": "HIGH",
+      "target": "Adolescents with Depression and their Parents",
+      "target_confidence": "HIGH",
+      "location": "N/A (cloud-based AI service)",
+      "location_confidence": "LOW",
+      "time": "Ongoing (as of the time queries were observed)",
+      "time_confidence": "MEDIUM",
+      "source_or_client": "Healthcare Organization or Research Group",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The queries specifically relate to topics within adolescent mental health, such as SSRIs safety profile in adolescents and the effectiveness of different therapies for adolescent depression. Additionally, the mention of \"parental notification requirements\" suggests that they are considering the involvement of parents or guardians in the process. It is likely that this healthcare organization or research group is working on an ongoing study or analysis related to adolescent mental health issues."
+    },
+    "reconstruction_score": 0.0,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  }
+]

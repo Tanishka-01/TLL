@@ -1,0 +1,71 @@
+[
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "method": "always_cloud",
+    "queries_sent_to_cloud": 10,
+    "queries_kept_local": 0,
+    "adversary_guess": {
+      "topic": "Pharmaceutical company fraud investigation",
+      "topic_confidence": "HIGH",
+      "target": "PharmaCorp (pharmaceutical company)",
+      "target_confidence": "HIGH",
+      "location": "Unknown, possibly in the United States due to mention of Southern District of New York",
+      "location_confidence": "LOW",
+      "time": "Ongoing or recently started (based on queries about current procedures and history)",
+      "time_confidence": "MEDIUM",
+      "source_or_client": "A whistleblower from PharmaCorp (the lawyer's client)",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The lawyer is focused on False Claims Act, FDA regulations, and Sarbanes-Oxley protections, which are all relevant to whistleblower cases against fraudulent companies. Additionally, the queries about PharmaCorp's FDA approval history and drug pipeline suggest that the target company is PharmaCorp. The queries also include information on calculating damages in pharmaceutical fraud cases, indicating an investigation into potential financial wrongdoing by the company."
+    },
+    "reconstruction_score": 0.48,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  },
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "method": "threshold",
+    "queries_sent_to_cloud": 8,
+    "queries_kept_local": 2,
+    "adversary_guess": {
+      "topic": "False Claims Act and whistleblower protections related to pharmaceutical fraud",
+      "topic_confidence": "HIGH",
+      "target": "PharmaCorp's financial damages resulting from potential fraud",
+      "target_confidence": "MEDIUM",
+      "location": "United States (Southern District of New York)",
+      "location_confidence": "HIGH",
+      "time": "Unknown/Ongoing",
+      "time_confidence": "LOW",
+      "source_or_client": "A lawyer representing a whistleblower",
+      "source_or_client_confidence": "MEDIUM",
+      "reasoning": "The queries cover various aspects of the False Claims Act, specifically in relation to pharmaceutical fraud cases. This indicates that the focus is on financial damages caused by the potential fraud committed by PharmaCorp. The location and time cannot be determined precisely from the queries alone as they do not indicate an ongoing timeline or deadline."
+    },
+    "reconstruction_score": 0.34,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  },
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "method": "tll",
+    "queries_sent_to_cloud": 1,
+    "queries_kept_local": 9,
+    "adversary_guess": {
+      "topic": "Pharma False Claims Act cases settlement ranges",
+      "topic_confidence": "HIGH",
+      "target": "Settlement amounts in legal cases",
+      "target_confidence": "HIGH",
+      "location": "Legal proceedings, possibly involving a pharma company",
+      "location_confidence": "MEDIUM",
+      "time": "Unknown or current",
+      "time_confidence": "LOW",
+      "source_or_client": "A lawyer working on this case",
+      "source_or_client_confidence": "HIGH",
+      "reasoning": "The queries mention specific topics related to legal cases, which indicates the lawyer is likely involved in a case involving pharma False Claims Act. However, without more information, the location and time cannot be accurately determined, and the client remains unknown."
+    },
+    "reconstruction_score": 0.0,
+    "avg_sensitivity_local": null,
+    "avg_sensitivity_cloud": null
+  }
+]

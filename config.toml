@@ -1,0 +1,4 @@
+llm_model = "capybarahermes-2.5-mistral-7b.Q4_0:latest"
+ollama_url = "http://localhost:11434"
+log_file = "./logs/routing.log"
+enable_logging = true

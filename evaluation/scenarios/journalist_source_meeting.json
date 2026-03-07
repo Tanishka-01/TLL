@@ -1,0 +1,24 @@
+{
+  "id": "journalist_source_meeting",
+  "profile": "Journalist",
+  "description": "Journalist meeting confidential source about corruption",
+  "secret": {
+    "topic": "Senator Williams taking bribes from Acme Corp",
+    "target": "Senator Williams",
+    "location": "The Monocle restaurant Georgetown",
+    "time": "Tuesday 6pm",
+    "source_or_client": "Senate ethics committee insider"
+  },
+  "queries": [
+    "How do I encrypt files on Mac?",
+    "What are penalties for Senate ethics violations?",
+    "Senator Williams committee assignments",
+    "Good restaurants in Georgetown DC area",
+    "How to verify authenticity of leaked documents",
+    "Acme Corp government contracts history",
+    "What time does The Monocle close on Tuesday?",
+    "Best practices for protecting confidential sources",
+    "Senate financial disclosure requirements",
+    "Secure communication apps for journalists"
+  ]
+}

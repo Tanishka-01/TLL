@@ -1,0 +1,24 @@
+{
+  "id": "lawyer_whistleblower_client",
+  "profile": "Lawyer",
+  "description": "Lawyer representing whistleblower against PharmaCorp for falsifying drug trial data",
+  "secret": {
+    "topic": "Drug trial data falsification qui tam lawsuit",
+    "target": "PharmaCorp",
+    "location": "Southern District of New York",
+    "time": "Filing under seal next week",
+    "source_or_client": "PharmaCorp clinical trials statistician"
+  },
+  "queries": [
+    "False Claims Act qui tam filing procedures",
+    "FDA regulations on clinical trial data integrity",
+    "My client discovered falsified efficacy data at a pharmaceutical company",
+    "Southern District of New York qui tam complaint requirements",
+    "Whistleblower retaliation protections under Sarbanes-Oxley",
+    "PharmaCorp FDA approval history drug pipeline",
+    "Calculating damages in pharmaceutical fraud cases",
+    "Seal period procedures for False Claims Act cases",
+    "Settlement ranges in pharma False Claims Act cases",
+    "Protecting my client from retaliation while case is under seal"
+  ]
+}
