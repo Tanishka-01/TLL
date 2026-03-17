@@ -1,6 +1,6 @@
 # Correlation Layer Test Results
 
-_Testing the TLL correlation engine (`correlation.py`) in isolation across all four profiles._
+_Testing the TLL correlation (`correlation.py`) in isolation across all four profiles._
 _Each test pre-loads a cloud service's session history, then checks whether a new query would create a dangerous combination._
 
 **How the correlation layer works:**
