@@ -3,9 +3,7 @@
 _Testing the TLL correlation (`correlation.py`) in isolation across all four profiles._
 _Each test pre-loads a cloud service's session history, then checks whether a new query would create a dangerous combination._
 
-**How the correlation layer works:**
-1. **Heuristic check (instant)** — keyword-based pattern matching for known dangerous combinations. Returns immediately with 0ms latency.
-2. **LLM fallback** — if the heuristic passes, a local Ollama model (`capybarahermes-2.5-mistral-7b`) makes a semantic judgment. Adds 9–32 seconds.
+
 
 **Risk levels:** HIGH → route to LOCAL (blocked), LOW/NONE → SAFE to proceed to cloud.
 
