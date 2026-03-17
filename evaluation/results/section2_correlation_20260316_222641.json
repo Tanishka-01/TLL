@@ -1,0 +1,201 @@
+[
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "total_queries": 10,
+    "cloud_in": 4,
+    "blocked": 0,
+    "final_cloud": 4,
+    "correlation_checks": [
+      {
+        "query": "Adolescent depression diagnostic criteria DSM-5",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014",
+        "decision": "PASS",
+        "risk": "NONE",
+        "reason": "No prior history \u2014 trivially safe",
+        "duration_ms": 0
+      },
+      {
+        "query": "SSRIs safety profile in adolescent patients",
+        "service": "GEMINI",
+        "history_at_check": [],
+        "engine": "\u2014",
+        "decision": "PASS",
+        "risk": "NONE",
+        "reason": "No prior history \u2014 trivially safe",
+        "duration_ms": 0
+      },
+      {
+        "query": "Parental notification requirements for minor psychiatric admissions",
+        "service": "OPENAI",
+        "history_at_check": [
+          "Adolescent depression diagnostic criteria DSM-5"
+        ],
+        "engine": "LLM",
+        "decision": "PASS",
+        "risk": "LOW",
+        "reason": "Correlation Risk: LOW",
+        "duration_ms": 49556
+      },
+      {
+        "query": "DBT vs CBT effectiveness for adolescent depression",
+        "service": "OPENAI",
+        "history_at_check": [
+          "Adolescent depression diagnostic criteria DSM-5",
+          "Parental notification requirements for minor psychiatric admissions"
+        ],
+        "engine": "LLM",
+        "decision": "PASS",
+        "risk": "LOW",
+        "reason": "Correlation Risk: LOW",
+        "duration_ms": 15638
+      }
+    ]
+  },
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 1,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "How do I encrypt files on Mac?",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014",
+        "decision": "PASS",
+        "risk": "NONE",
+        "reason": "No prior history \u2014 trivially safe",
+        "duration_ms": 0
+      },
+      {
+        "query": "What are penalties for Senate ethics violations?",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How do I encrypt files on Mac?"
+        ],
+        "engine": "LLM",
+        "decision": "PASS",
+        "risk": "LOW",
+        "reason": "Correlation Risk: LOW",
+        "duration_ms": 21289
+      },
+      {
+        "query": "Best practices for protecting confidential sources",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How do I encrypt files on Mac?",
+          "What are penalties for Senate ethics violations?"
+        ],
+        "engine": "LLM",
+        "decision": "BLOCKED",
+        "risk": "LOW",
+        "reason": "Correlation Risk: LOW",
+        "duration_ms": 22871
+      }
+    ]
+  },
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "total_queries": 10,
+    "cloud_in": 4,
+    "blocked": 1,
+    "final_cloud": 3,
+    "correlation_checks": [
+      {
+        "query": "False Claims Act qui tam filing procedures",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014",
+        "decision": "PASS",
+        "risk": "NONE",
+        "reason": "No prior history \u2014 trivially safe",
+        "duration_ms": 0
+      },
+      {
+        "query": "FDA regulations on clinical trial data integrity",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014",
+        "decision": "PASS",
+        "risk": "NONE",
+        "reason": "No prior history \u2014 trivially safe",
+        "duration_ms": 0
+      },
+      {
+        "query": "Southern District of New York qui tam complaint requirements",
+        "service": "OPENAI",
+        "history_at_check": [
+          "FDA regulations on clinical trial data integrity"
+        ],
+        "engine": "LLM",
+        "decision": "PASS",
+        "risk": "LOW",
+        "reason": "Correlation Risk: LOW",
+        "duration_ms": 24369
+      },
+      {
+        "query": "Settlement ranges in pharma False Claims Act cases",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "False Claims Act qui tam filing procedures"
+        ],
+        "engine": "LLM",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "reason": "Correlation Risk: HIGH",
+        "duration_ms": 10705
+      }
+    ]
+  },
+  {
+    "scenario_id": "researcher_startup_idea",
+    "profile": "Researcher",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 1,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "University IP ownership policies for federally funded research",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014",
+        "decision": "PASS",
+        "risk": "NONE",
+        "reason": "No prior history \u2014 trivially safe",
+        "duration_ms": 0
+      },
+      {
+        "query": "Conflict of interest disclosure requirements for NSF grant recipients",
+        "service": "OPENAI",
+        "history_at_check": [
+          "University IP ownership policies for federally funded research"
+        ],
+        "engine": "LLM",
+        "decision": "PASS",
+        "risk": "LOW",
+        "reason": "Correlation Risk: LOW",
+        "duration_ms": 24270
+      },
+      {
+        "query": "Bayh-Dole Act implications for commercializing federally funded discoveries",
+        "service": "OPENAI",
+        "history_at_check": [
+          "University IP ownership policies for federally funded research",
+          "Conflict of interest disclosure requirements for NSF grant recipients"
+        ],
+        "engine": "LLM",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "reason": "Correlation Risk: HIGH",
+        "duration_ms": 15590
+      }
+    ]
+  }
+]

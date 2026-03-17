@@ -1,0 +1,214 @@
+[
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "total_queries": 10,
+    "cloud_in": 4,
+    "blocked": 0,
+    "final_cloud": 4,
+    "correlation_checks": [
+      {
+        "query": "Adolescent depression diagnostic criteria DSM-5",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "SSRIs safety profile in adolescent patients",
+        "service": "GEMINI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Parental notification requirements for minor psychiatric admissions",
+        "service": "OPENAI",
+        "history_at_check": [
+          "Adolescent depression diagnostic criteria DSM-5"
+        ],
+        "engine": "LLM (40669 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "Healthcare topic + specific legal topic, but no identifiers or patient details in the new query. The combination does not reveal any sensitive information.",
+        "duration_ms": 40669
+      },
+      {
+        "query": "DBT vs CBT effectiveness for adolescent depression",
+        "service": "OPENAI",
+        "history_at_check": [
+          "Adolescent depression diagnostic criteria DSM-5",
+          "Parental notification requirements for minor psychiatric admissions"
+        ],
+        "engine": "LLM (15744 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The healthcare profile combined with OpenAI seeing adolescent depression diagnostic criteria and parental notification requirements implies that they might be working on a case involving a minor with depression. The new query, comparing the effectiveness of DBT vs CBT for adolescent depression, is related to the same research area but does not reveal any specific patient information.",
+        "duration_ms": 15744
+      }
+    ]
+  },
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 0,
+    "final_cloud": 3,
+    "correlation_checks": [
+      {
+        "query": "How do I encrypt files on Mac?",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "What are penalties for Senate ethics violations?",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How do I encrypt files on Mac?"
+        ],
+        "engine": "LLM (15252 ms)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "The current information Claude has seen is about encrypting files, which doesn't reveal any specific topic or source. The new query asks about penalties for Senate ethics violations, which is a completely different topic. There are no overlapping identifiers or details that would complete a dangerous picture when combined.",
+        "duration_ms": 15252
+      },
+      {
+        "query": "Best practices for protecting confidential sources",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How do I encrypt files on Mac?",
+          "What are penalties for Senate ethics violations?"
+        ],
+        "engine": "LLM (17405 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The profile is Journalist, and Claude has seen two queries related to encryption and Senate ethics violations penalties. The new query is about best practices for protecting confidential sources. This new query reveals information about journalist's work process but doesn't match the previously seen topics directly. Therefore, adding this query to Claude's history would not complete any specific picture related to previous queries.",
+        "duration_ms": 17405
+      }
+    ]
+  },
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "total_queries": 10,
+    "cloud_in": 4,
+    "blocked": 2,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "False Claims Act qui tam filing procedures",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "FDA regulations on clinical trial data integrity",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Southern District of New York qui tam complaint requirements",
+        "service": "OPENAI",
+        "history_at_check": [
+          "FDA regulations on clinical trial data integrity"
+        ],
+        "engine": "LLM (15471 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "Lawyer profile combined with OpenAI's knowledge of FDA regulations suggests the user is working on a case related to clinical trial data integrity. The new query about \"Southern District of New York qui tam complaint requirements\" reveals specific legal action details, which might be part of that case.",
+        "duration_ms": 15471
+      },
+      {
+        "query": "Settlement ranges in pharma False Claims Act cases",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "False Claims Act qui tam filing procedures"
+        ],
+        "engine": "LLM (15077 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "The profile is a Lawyer, and Claude has seen queries related to False Claims Act qui tam filing procedures. The new query asks about settlement ranges in pharma False Claims Act cases. This combination of information reveals privileged case details, which could compromise client confidentiality.",
+        "duration_ms": 15077
+      }
+    ]
+  },
+  {
+    "scenario_id": "researcher_startup_idea",
+    "profile": "Researcher",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 1,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "University IP ownership policies for federally funded research",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Conflict of interest disclosure requirements for NSF grant recipients",
+        "service": "OPENAI",
+        "history_at_check": [
+          "University IP ownership policies for federally funded research"
+        ],
+        "engine": "LLM (15236 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "Researcher profile combined with OpenAI data is a potential danger. OpenAI has seen information about university IP ownership policies, which is related to research. The new query asks about conflict of interest disclosure requirements for NSF grant recipients, which is also related to research and funding.",
+        "duration_ms": 15236
+      },
+      {
+        "query": "Bayh-Dole Act implications for commercializing federally funded discoveries",
+        "service": "OPENAI",
+        "history_at_check": [
+          "University IP ownership policies for federally funded research"
+        ],
+        "engine": "LLM (19445 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The profile is a researcher and the cloud service, OpenAI, has seen information related to \"University IP ownership policies for federally funded research\". The new query is about the \"Bayh-Dole Act implications for commercializing federally funded discoveries.\" This combination does not reveal any specific details or numbers. It involves a topic related to research but doesn't mention a specific study, institution, or discovery. Therefore, there is no danger of revealing unpublished results.",
+        "duration_ms": 19445
+      }
+    ]
+  }
+]

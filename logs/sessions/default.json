@@ -1,0 +1,22 @@
+{
+  "claude": [
+    "How do I encrypt files on Mac?",
+    "What are penalties for Senate ethics violations?",
+    "Best practices for protecting confidential sources",
+    "False Claims Act qui tam filing procedures",
+    "Settlement ranges in pharma False Claims Act cases"
+  ],
+  "openai": [
+    "Adolescent depression diagnostic criteria DSM-5",
+    "Parental notification requirements for minor psychiatric admissions",
+    "DBT vs CBT effectiveness for adolescent depression",
+    "FDA regulations on clinical trial data integrity",
+    "Southern District of New York qui tam complaint requirements",
+    "University IP ownership policies for federally funded research",
+    "Conflict of interest disclosure requirements for NSF grant recipients",
+    "Bayh-Dole Act implications for commercializing federally funded discoveries"
+  ],
+  "gemini": [
+    "SSRIs safety profile in adolescent patients"
+  ]
+}

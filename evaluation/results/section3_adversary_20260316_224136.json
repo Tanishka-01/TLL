@@ -1,0 +1,65 @@
+[
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "total_queries": 10,
+    "final_cloud": 4,
+    "cloud_queries": [
+      "Adolescent depression diagnostic criteria DSM-5",
+      "SSRIs safety profile in adolescent patients",
+      "Parental notification requirements for minor psychiatric admissions",
+      "DBT vs CBT effectiveness for adolescent depression"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "HIGH",
+      "reasoning": "The observed queries do not directly expose patient identities combined with medical information. However, it's essential that access controls and data privacy protocols are in place to prevent potential exposure of sensitive data in the answers provided by the cloud AI service."
+    }
+  },
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "final_cloud": 3,
+    "cloud_queries": [
+      "How do I encrypt files on Mac?",
+      "What are penalties for Senate ethics violations?",
+      "Best practices for protecting confidential sources"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "HIGH",
+      "reasoning": "The queries relate to general topics (file encryption, penalties for ethics violations) and best practices for protecting confidential sources. None of the queries specifically mention or expose sensitive information related to the journalist's investigation targets, source identity, or meeting details."
+    }
+  },
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "total_queries": 10,
+    "final_cloud": 2,
+    "cloud_queries": [
+      "False Claims Act qui tam filing procedures",
+      "FDA regulations on clinical trial data integrity"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "HIGH",
+      "reasoning": "The queries provide general information about legal matters and regulatory compliance but do not reveal any specific client identities, case strategies, privileged communications, or case details."
+    }
+  },
+  {
+    "scenario_id": "researcher_startup_idea",
+    "profile": "Researcher",
+    "total_queries": 10,
+    "final_cloud": 2,
+    "cloud_queries": [
+      "University IP ownership policies for federally funded research",
+      "Bayh-Dole Act implications for commercializing federally funded discoveries"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "HIGH",
+      "reasoning": "The queries relate to general legal topics and do not mention any specific researcher's sensitive information. However, it is always advisable for the researcher to verify this with the cloud AI service."
+    }
+  }
+]

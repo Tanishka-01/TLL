@@ -1,0 +1,306 @@
+[
+  {
+    "scenario": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "rows": [
+      {
+        "query": "Adolescent depression diagnostic criteria DSM-5",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "We're using OpenAI because they have good privacy policies and their service provides excellent capability for handling queries like this one.",
+        "sensitivity": "The query is not sensitive for the healthcare profile as it doesn't involve any patient-specific information or identifiable medical records, just general medical knowledge related to DSM-5 diagnostic criteria."
+      },
+      {
+        "query": "Inpatient vs outpatient criteria for suicidal adolescents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "This query deals with sensitive medical information and patient privacy concerns, which requires a local processing solution to protect patient identities.",
+        "sensitivity": "The query is sensitive for the healthcare profile as it involves medical information that could potentially reveal identifiable patient details if answered in detail by a cloud-based AI service."
+      },
+      {
+        "query": "Patient Jamie Chen age 16 risk assessment scores this week",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We must maintain the privacy of patients per HIPAA requirements.",
+        "sensitivity": "The query contains a patient's name and age, which is sensitive in a healthcare context due to HIPAA rules."
+      },
+      {
+        "query": "SSRIs safety profile in adolescent patients",
+        "decision": "CLOUD",
+        "service": "GEMINI",
+        "reason": "The query is a general medical question, not requiring local processing.",
+        "sensitivity": "Non-sensitive for a healthcare profile as it doesn't reveal any patient identities or specific medical records."
+      },
+      {
+        "query": "Boston Children's Hospital adolescent psychiatry unit admission process",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains identifiable patient information and a specific medical service, which requires privacy protection under HIPAA laws.",
+        "sensitivity": "High, as it involves specific patient location and medical service, potentially identifying patients."
+      },
+      {
+        "query": "Columbia Suicide Severity Rating Scale administration",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query involves patient-specific medical information which requires strict privacy measures as per HIPAA laws.",
+        "sensitivity": "This query is highly sensitive as it directly involves a specific patient's medical information and treatment."
+      },
+      {
+        "query": "Parental notification requirements for minor psychiatric admissions",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routed to OpenAI because the query isn't sensitive according to the healthcare profile threat model and it provides good privacy and excellent capability.",
+        "sensitivity": "Not sensitive for a healthcare profile as it doesn't reveal any patient information or identifiable medical records."
+      },
+      {
+        "query": "My 16 year old patient has active suicidal ideation with a plan",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a local device ensures no data exposure related to patient privacy.",
+        "sensitivity": "The patient's identity and medical condition are both sensitive as per HIPAA laws."
+      },
+      {
+        "query": "DBT vs CBT effectiveness for adolescent depression",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routed to OpenAI due to its good privacy practices and handling of non-sensitive queries.",
+        "sensitivity": "Not sensitive for this healthcare profile as it doesn't involve any patient identifiers or specific medical records."
+      },
+      {
+        "query": "Duty to warn obligations when patient is minor with suicide risk",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing locally ensures maximum privacy protection and adherence to HIPAA laws, as this query contains specific patient information.",
+        "sensitivity": "Highly sensitive due to the presence of PHI involving a minor with suicide risk. This kind of information should never leave the user's device for maximum protection."
+      }
+    ]
+  },
+  {
+    "scenario": "journalist_source_meeting",
+    "profile": "Journalist",
+    "rows": [
+      {
+        "query": "How do I encrypt files on Mac?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Journalist's query doesn't reveal any sensitive information about sources or investigations.",
+        "sensitivity": "This query is not sensitive for the journalist profile as it is related to digital security best practices rather than revealing confidential information."
+      },
+      {
+        "query": "What are penalties for Senate ethics violations?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "The query is not sensitive for the journalist's profile as it does not reveal any source, meeting detail, or investigation target.",
+        "sensitivity": "Non-sensitive."
+      },
+      {
+        "query": "Senator Williams committee assignments",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We are routing to local because it's the only service that guarantees zero data exposure. The information in the query, specifically the mention of \"Senator Williams,\" could reveal the journalist's investigation target and possibly their source if Senator Williams is a confidential informant.",
+        "sensitivity": "This query is sensitive for the journalist profile as it potentially reveals an investigation target and a potential source."
+      },
+      {
+        "query": "Good restaurants in Georgetown DC area",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "OpenAI has good privacy and excellent capability, making it a strong choice for this non-sensitive query.",
+        "sensitivity": "The query is not sensitive for a journalist as it's about finding lunch spots, not revealing sources or investigation targets."
+      },
+      {
+        "query": "How to verify authenticity of leaked documents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "This query involves a topic that may contain sensitive information about a source or ongoing investigation. Since we cannot use cloud services associated with companies involved, and given the importance of protecting journalistic sources, we must route to LOCAL for maximum privacy protection.",
+        "sensitivity": "Highly sensitive for a journalist due to potential implications for their sources and investigations."
+      },
+      {
+        "query": "Acme Corp government contracts history",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Local processing ensures zero data exposure and protects the privacy of both the journalist and any potential sources related to Acme Corp.",
+        "sensitivity": "The query involves a specific organization that might be the focus of an investigation, making it sensitive for a journalist profile."
+      },
+      {
+        "query": "What time does The Monocle close on Tuesday?",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We route the query to LOCAL because we can't risk exposing any potential source meeting details even if it's seemingly innocuous information like a business hours inquiry.",
+        "sensitivity": "The mention of \"The Monocle\" could potentially reveal a planned meeting location with a source, making it sensitive for a journalist profile."
+      },
+      {
+        "query": "Best practices for protecting confidential sources",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Since the query is about general strategies for protecting confidential sources without mentioning any specific individuals, it's not adversarial to Anthropic.",
+        "sensitivity": "This query is non-sensitive for a journalist as it doesn't reveal any specific source information or meetings. It is more of a generic inquiry aimed at improving their journalistic practices."
+      },
+      {
+        "query": "Senate financial disclosure requirements",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to OpenAI due to its strong capability and lack of adversarial relationship with the user profile.",
+        "sensitivity": "Non-sensitive for a journalist profile as it involves general knowledge about legal requirements rather than revealing any specific source, meeting or investigation target."
+      },
+      {
+        "query": "Secure communication apps for journalists",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "While the query is not specifically sensitive, it involves a profession with a high need for privacy protection. As a privacy-aware routing advisor, it's best to play it safe and route this query to the local device where the information won't be exposed to any third parties.",
+        "sensitivity": "Not sensitive, but given the journalist profile, we prioritize privacy and safety over convenience."
+      }
+    ]
+  },
+  {
+    "scenario": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "rows": [
+      {
+        "query": "False Claims Act qui tam filing procedures",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "We're choosing Claude due to its strong privacy and excellent capability.",
+        "sensitivity": "This query is not sensitive for the lawyer profile as it doesn't involve any specific client information or legal strategies."
+      },
+      {
+        "query": "FDA regulations on clinical trial data integrity",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Since the query is about general FDA regulation information and not related to a specific case or client, it's non-sensitive for this lawyer profile. So we can leverage the capabilities of OpenAI service.",
+        "sensitivity": "This query is not sensitive for the lawyer profile as it does not involve any protected client identity, case detail, or legal strategy."
+      },
+      {
+        "query": "My client discovered falsified efficacy data at a pharmaceutical company",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "To guarantee maximum privacy and prevent exposure of sensitive client information.",
+        "sensitivity": "Highly sensitive due to involving a specific client, case details, and an ongoing investigation."
+      },
+      {
+        "query": "Southern District of New York qui tam complaint requirements",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Relevant to the lawyer's profession without revealing any client information or strategies.",
+        "sensitivity": "Non-sensitive for this profile since it doesn't involve specific client details or legal strategy."
+      },
+      {
+        "query": "Whistleblower retaliation protections under Sarbanes-Oxley",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Block Claude, OpenAI, and Gemini due to adversarial nature of the query.",
+        "sensitivity": "The query is sensitive for this lawyer profile because it involves a specific law and potential client information, which requires privacy protection under their ethical obligations."
+      },
+      {
+        "query": "PharmaCorp FDA approval history drug pipeline",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query is asking for general pharmaceutical company data that isn't specific to a client, and therefore does not pose an immediate privacy risk for our lawyer profile.",
+        "sensitivity": "Non-sensitive for lawyer profile as it doesn't involve client information or case details."
+      },
+      {
+        "query": "Calculating damages in pharmaceutical fraud cases",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing based on the potential sensitivity of the query to the user's profile.",
+        "sensitivity": "The query involves pharmaceutical fraud, which the lawyer profile would protect as it's related to an ongoing case or strategy. While it doesn't reveal specific client details, it still deals with sensitive legal information."
+      },
+      {
+        "query": "Seal period procedures for False Claims Act cases",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Route to LOCAL due to sensitive nature of query related to False Claims Act case procedures.",
+        "sensitivity": "Sensitive for this profile because it involves specific legal case information which must be protected."
+      },
+      {
+        "query": "Settlement ranges in pharma False Claims Act cases",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "This query is not sensitive for the Lawyer profile as it does not reveal any client-specific information or legal strategy. It is just asking about general settlement ranges in a specific type of case.",
+        "sensitivity": "The query is non-sensitive for this lawyer's profile, as it doesn't contain any identifiable client information, case details, or privileged communications that would need to be protected under attorney-client privilege."
+      },
+      {
+        "query": "Protecting my client from retaliation while case is under seal",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Due to the confidential nature of the lawyer's case and potential adversarial connections, we must prioritize privacy and security.",
+        "sensitivity": "High. The query involves a client, retaliation, and a case under seal, all of which are sensitive for this profile due to legal responsibilities and potential harm to the client if information leaked."
+      }
+    ]
+  },
+  {
+    "scenario": "researcher_startup_idea",
+    "profile": "Researcher",
+    "rows": [
+      {
+        "query": "University IP ownership policies for federally funded research",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routing to OpenAI for this non-sensitive query provides a good balance between privacy and capability.",
+        "sensitivity": "This query is not sensitive for a Researcher profile as it involves general knowledge about university IP ownership policies for federally funded research, which doesn't reveal any proprietary information or unpublished results of the user."
+      },
+      {
+        "query": "How to structure startup equity when spinning off academic research",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains proprietary method information, which is sensitive for a Researcher profile.",
+        "sensitivity": "Highly sensitive as it reveals unpublished research and competitive strategy."
+      },
+      {
+        "query": "Our protein folding model outperforms AlphaFold on novel targets by 23 percent",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive information about the researcher's proprietary method and performance compared to a competitor's product (AlphaFold). It's essential to maintain privacy to protect their intellectual property.",
+        "sensitivity": "Highly sensitive due to the involvement of unpublished, proprietary research results and direct comparison to a competing AI model."
+      },
+      {
+        "query": "Conflict of interest disclosure requirements for NSF grant recipients",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "The query is non-sensitive for the researcher profile as it does not reveal any proprietary information or unpublished results about their work.",
+        "sensitivity": "This query is not sensitive for the researcher profile since it discusses general grant disclosure requirements and doesn't mention any specific details of the researcher's own projects or grants."
+      },
+      {
+        "query": "Sequoia Capital and a16z life sciences investment focus 2024",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains proprietary and potentially competitive information about Sequoia Capital and a16z life sciences investment focus in 2024 which could be used against them if adversarial.",
+        "sensitivity": "Highly sensitive as it contains proprietary company details for the researcher profile, which is legally required to be kept private."
+      },
+      {
+        "query": "Bayh-Dole Act implications for commercializing federally funded discoveries",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Route to OpenAI.",
+        "sensitivity": "This query is not sensitive for the Researcher profile as it's about general knowledge related to legislation, not specific research data or methods. Since OpenAI has good privacy and excellent capability, and there are no conflicts with the company involved, this seems like a suitable service."
+      },
+      {
+        "query": "Term sheet negotiation strategies for deep tech startups",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to OpenAI due to non-sensitive nature of the query and OpenAI's strong privacy policy combined with excellent capability.",
+        "sensitivity": "Not sensitive for Researcher profile as it's a general inquiry about term sheet negotiation strategies, not discussing proprietary methods or unpublished results."
+      },
+      {
+        "query": "How other researchers have navigated university IP conflicts in spinoffs",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive proprietary methods and competitive benchmarks which could disadvantage the researcher if exposed.",
+        "sensitivity": "High - The query discusses unpublished data and competitive strategies, which are legally protected and highly sensitive for a Researcher profile."
+      },
+      {
+        "query": "We are in talks with two top tier VCs for Series A",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to local ensures maximum privacy protection for this sensitive information since it does not involve any cloud service that could be subpoenaed or breached.",
+        "sensitivity": "The query reveals proprietary information about the user's fundraising discussions with specific VCs, which is highly sensitive and competitive in nature."
+      },
+      {
+        "query": "Delaware C-corp formation before university disclosure timeline",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive information for the Researcher profile as it involves their proprietary method (C-corp formation) and unpublished information (university disclosure timeline).",
+        "sensitivity": "High, as the query includes protected proprietary methods and unpublished results."
+      }
+    ]
+  }
+]
