@@ -1,0 +1,23 @@
+[
+  {
+    "scenario_id": "researcher_drug_discovery",
+    "profile": "Researcher",
+    "total_queries": 10,
+    "cloud_in": 1,
+    "blocked": 0,
+    "final_cloud": 1,
+    "correlation_checks": [
+      {
+        "query": "Our compound outperforms Sotorasib on KRAS G12C targets in our unpublished data",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      }
+    ]
+  }
+]

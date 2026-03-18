@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "rows": [
+      {
+        "query": "False Claims Act qui tam filing procedures",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "We're choosing Claude due to its strong privacy and excellent capability.",
+        "sensitivity": "This query is not sensitive for the lawyer profile as it doesn't involve any specific client information or legal strategies."
+      },
+      {
+        "query": "FDA regulations on clinical trial data integrity",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Since the query is about general FDA regulation information and not related to a specific case or client, it's non-sensitive for this lawyer profile. So we can leverage the capabilities of OpenAI service.",
+        "sensitivity": "This query is not sensitive for the lawyer profile as it does not involve any protected client identity, case detail, or legal strategy."
+      },
+      {
+        "query": "My client discovered falsified efficacy data at a pharmaceutical company",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "To guarantee maximum privacy and prevent exposure of sensitive client information.",
+        "sensitivity": "Highly sensitive due to involving a specific client, case details, and an ongoing investigation."
+      },
+      {
+        "query": "Southern District of New York qui tam complaint requirements",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Relevant to the lawyer's profession without revealing any client information or strategies.",
+        "sensitivity": "Non-sensitive for this profile since it doesn't involve specific client details or legal strategy."
+      },
+      {
+        "query": "Whistleblower retaliation protections under Sarbanes-Oxley",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Block Claude, OpenAI, and Gemini due to adversarial nature of the query.",
+        "sensitivity": "The query is sensitive for this lawyer profile because it involves a specific law and potential client information, which requires privacy protection under their ethical obligations."
+      },
+      {
+        "query": "PharmaCorp FDA approval history drug pipeline",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query is asking for general pharmaceutical company data that isn't specific to a client, and therefore does not pose an immediate privacy risk for our lawyer profile.",
+        "sensitivity": "Non-sensitive for lawyer profile as it doesn't involve client information or case details."
+      },
+      {
+        "query": "Calculating damages in pharmaceutical fraud cases",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing based on the potential sensitivity of the query to the user's profile.",
+        "sensitivity": "The query involves pharmaceutical fraud, which the lawyer profile would protect as it's related to an ongoing case or strategy. While it doesn't reveal specific client details, it still deals with sensitive legal information."
+      },
+      {
+        "query": "Seal period procedures for False Claims Act cases",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Route to LOCAL due to sensitive nature of query related to False Claims Act case procedures.",
+        "sensitivity": "Sensitive for this profile because it involves specific legal case information which must be protected."
+      },
+      {
+        "query": "Settlement ranges in pharma False Claims Act cases",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "This query is not sensitive for the Lawyer profile as it does not reveal any client-specific information or legal strategy. It is just asking about general settlement ranges in a specific type of case.",
+        "sensitivity": "The query is non-sensitive for this lawyer's profile, as it doesn't contain any identifiable client information, case details, or privileged communications that would need to be protected under attorney-client privilege."
+      },
+      {
+        "query": "Protecting my client from retaliation while case is under seal",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Due to the confidential nature of the lawyer's case and potential adversarial connections, we must prioritize privacy and security.",
+        "sensitivity": "High. The query involves a client, retaliation, and a case under seal, all of which are sensitive for this profile due to legal responsibilities and potential harm to the client if information leaked."
+      }
+    ]
+  }
+]

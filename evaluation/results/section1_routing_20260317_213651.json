@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "healthcare_hiv_patient",
+    "profile": "Healthcare",
+    "rows": [
+      {
+        "query": "Current HIV treatment protocols and antiretroviral therapy options",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query is about non-sensitive medical knowledge, and OpenAI's service has good privacy and excellent capability.",
+        "sensitivity": "Non-sensitive for this profile as it does not involve patient-specific information. However, remember that any such information should be handled locally to maintain patient confidentiality."
+      },
+      {
+        "query": "Partner notification laws for HIV diagnosis by state",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Since this information might still be identifiable and linked to a specific patient or case, it's better not to risk exposing any data by using a cloud-based AI service.",
+        "sensitivity": "The query is moderately sensitive for healthcare workers as it involves potentially identifiable patient-related information."
+      },
+      {
+        "query": "Patient Maria Santos age 34 HIV viral load results last week",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to local due to HIPAA protections and presence of identifiable patient info in query.",
+        "sensitivity": "Sensitive for healthcare profile due to the presence of specific patient data."
+      },
+      {
+        "query": "HIPAA obligations when HIV patient refuses to notify partner",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a local device ensures maximum privacy and confidentiality, avoiding any potential exposure through third-party services.",
+        "sensitivity": "The query contains identifiable patient information along with sensitive medical details which could harm this user if seen by an adversary. It's HIPAA protected data, and as per law, it requires local processing."
+      },
+      {
+        "query": "Employment law protections for HIV-positive individuals",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains personal health information that needs protection due to HIPAA requirements.",
+        "sensitivity": "This query is highly sensitive for a healthcare profile as it involves medical information without any specific protections for patient privacy."
+      },
+      {
+        "query": "Pre-exposure prophylaxis PrEP effectiveness and protocols",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "As the query is not sensitive for a healthcare worker and does not contain specific patient information, we can use a cloud-based service to answer the question.",
+        "sensitivity": "Non-sensitive for this healthcare profile as it doesn't involve any patient-specific information."
+      },
+      {
+        "query": "Confidentiality obligations in HIV disclosure to sexual partners",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We must route this query to local processing due to its sensitivity. The query involves specific medical information and patient identity, which fall under HIPAA guidelines and require strict confidentiality.",
+        "sensitivity": "This query is highly sensitive for a healthcare profile because it directly involves patient identity and identifiable medical record information that needs protection under HIPAA rules."
+      },
+      {
+        "query": "My patient diagnosed HIV positive last week refuses partner notification",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Due to HIPAA requirements and the patient's identifiable information being present in the query, the request is routed to the local device for privacy reasons.",
+        "sensitivity": "Highly sensitive as it involves a specific patient's medical condition and their personal actions, which are protected under HIPAA and require strict confidentiality."
+      },
+      {
+        "query": "CD4 count thresholds for initiating antiretroviral therapy",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We chose OpenAI because it provides good privacy and excellent capability, and the query is non-sensitive for a healthcare worker.",
+        "sensitivity": "This query is not sensitive for the healthcare worker's profile as it does not involve patient-specific information but rather general medical knowledge about CD4 count thresholds for initiating antiretroviral therapy."
+      },
+      {
+        "query": "Maria Santos MRN-2291 antiretroviral therapy initiation protocol",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Sharing this information could directly harm Maria Santos if it gets into the wrong hands, violating HIPAA laws. The privacy of this query is extremely important and can only be guaranteed by handling it locally on your device.",
+        "sensitivity": "This query is highly sensitive for a healthcare worker as it reveals specific patient information that must be protected under HIPAA rules."
+      }
+    ]
+  }
+]

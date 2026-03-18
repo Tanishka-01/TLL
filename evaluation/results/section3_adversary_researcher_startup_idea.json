@@ -1,0 +1,17 @@
+[
+  {
+    "scenario_id": "researcher_startup_idea",
+    "profile": "Researcher",
+    "total_queries": 10,
+    "final_cloud": 2,
+    "cloud_queries": [
+      "University IP ownership policies for federally funded research",
+      "Bayh-Dole Act implications for commercializing federally funded discoveries"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "HIGH",
+      "reasoning": "The queries relate to general legal topics and do not mention any specific researcher's sensitive information. However, it is always advisable for the researcher to verify this with the cloud AI service."
+    }
+  }
+]

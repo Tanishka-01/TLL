@@ -1,0 +1,50 @@
+[
+  {
+    "scenario_id": "journalist_national_security",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 0,
+    "final_cloud": 3,
+    "correlation_checks": [
+      {
+        "query": "How does end-to-end encryption work?",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "How do journalists protect sources from government surveillance?",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How does end-to-end encryption work?"
+        ],
+        "engine": "LLM (39833 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The profile is a journalist, and Claude has seen information about how end-to-end encryption works. The new query asks for ways journalists protect their sources from government surveillance. This new query adds to the general topic of source protection, specifically addressing government surveillance. While it does not directly mention end-to-end encryption or any other specific topic Claude has seen, it could still provide context and reveal more about Claude's research interests. However, this combination does not directly reveal a dangerous amount of sensitive information.",
+        "duration_ms": 39833
+      },
+      {
+        "query": "NSA contractor employment and security clearance procedures",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How does end-to-end encryption work?",
+          "How do journalists protect sources from government surveillance?"
+        ],
+        "engine": "LLM (17032 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The profile is a journalist who has previously queried about end-to-end encryption and how journalists protect sources from government surveillance. The new query is about NSA contractor employment and security clearance procedures. This new query adds information related to government surveillance, which is a common theme with the previous queries. However, it does not reveal any specific location or event like in the first example. It also doesn't mention journalists or sources directly.",
+        "duration_ms": 17032
+      }
+    ]
+  }
+]

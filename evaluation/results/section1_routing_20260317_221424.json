@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "researcher_drug_discovery",
+    "profile": "Researcher",
+    "rows": [
+      {
+        "query": "KRAS mutation targeting approaches in oncology research",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains specific, unpublished information related to researcher's proprietary methods and unpublished results.",
+        "sensitivity": "Sensitive due to its nature of being unpublished and falling under the category of proprietary methods."
+      },
+      {
+        "query": "Phase 2 to phase 3 clinical trial transition requirements FDA",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We chose Gemini as it provides good capability and moderate privacy, and there are no conflicts with the user or their profile.",
+        "sensitivity": "This query is not sensitive for a researcher profile since it doesn't reveal any proprietary methods, unpublished results, or competitive benchmarks."
+      },
+      {
+        "query": "Our KRAS inhibitor compound shows 78 percent tumor reduction in our phase 2 data",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains proprietary method and unpublished result data which is sensitive for a Researcher profile.",
+        "sensitivity": "The query reveals confidential company research details, making it highly sensitive."
+      },
+      {
+        "query": "Patent filing process for pharmaceutical compounds developed with federal funding",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a cloud service could potentially expose sensitive information about their proprietary methods and unpublished results.",
+        "sensitivity": "This query is highly sensitive for this researcher profile, as it involves specifics of a patent filing process using federally funded pharmaceutical compounds which are considered proprietary methods and unpublished results."
+      },
+      {
+        "query": "Pfizer oncology partnership deal structures and licensing terms",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Local routing ensures maximum privacy and confidentiality for proprietary methods and unpublished results.",
+        "sensitivity": "This query is highly sensitive for a Researcher profile as it involves proprietary methods and unpublished results, putting the user at a competitive disadvantage if the information were exposed."
+      },
+      {
+        "query": "Our compound outperforms Sotorasib on KRAS G12C targets in our unpublished data",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "The query contains unpublished data and competitive benchmarks which is sensitive for a researcher profile. It's not adversarial to Google or Alphabet, so we can use their service, Gemini.",
+        "sensitivity": "Highly sensitive due to the presence of unpublished data and comparative performance with Sotorasib, both of which could give an edge to competitors if exposed."
+      },
+      {
+        "query": "Bayh-Dole Act implications for university drug discovery patents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query is non-sensitive for this Researcher profile and concerns general knowledge about legal implications related to university drug discovery patents. It does not involve the researcher's proprietary methods, unpublished results, or competitive benchmarks.",
+        "sensitivity": "Not sensitive"
+      },
+      {
+        "query": "We are in final discussions with Pfizer for licensing before our patent filing",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to local due to proprietary information related to ongoing discussions with Pfizer and potential conflicts with OpenAI/Microsoft and Anthropic.",
+        "sensitivity": "Highly sensitive as it involves unpublished details of a business discussion, which is protected by this researcher's profile."
+      },
+      {
+        "query": "Clinical trial data ownership when university and pharma co-develop",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a cloud service would expose confidential research details that could give an edge to competitors.",
+        "sensitivity": "This query is sensitive for the Researcher profile due to its focus on unpublished data and competitive benchmarks."
+      },
+      {
+        "query": "Competitive landscape for KRAS inhibitors currently in development",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "This query discusses a competitive benchmark which is considered proprietary information for the Researcher profile.",
+        "sensitivity": "The query contains sensitive information about competitors' R&D progress on KRAS inhibitors that could give an edge in the market if exposed."
+      }
+    ]
+  }
+]

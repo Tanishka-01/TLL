@@ -1,0 +1,34 @@
+[
+  {
+    "scenario_id": "healthcare_cancer_patient",
+    "profile": "Healthcare",
+    "total_queries": 10,
+    "cloud_in": 2,
+    "blocked": 0,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "Stage 4 pancreatic cancer survival rates and treatment options",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Gemcitabine plus nab-paclitaxel versus FOLFIRINOX for pancreatic cancer",
+        "service": "GEMINI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      }
+    ]
+  }
+]

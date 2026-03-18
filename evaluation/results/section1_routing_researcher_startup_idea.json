@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "researcher_startup_idea",
+    "profile": "Researcher",
+    "rows": [
+      {
+        "query": "University IP ownership policies for federally funded research",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routing to OpenAI for this non-sensitive query provides a good balance between privacy and capability.",
+        "sensitivity": "This query is not sensitive for a Researcher profile as it involves general knowledge about university IP ownership policies for federally funded research, which doesn't reveal any proprietary information or unpublished results of the user."
+      },
+      {
+        "query": "How to structure startup equity when spinning off academic research",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains proprietary method information, which is sensitive for a Researcher profile.",
+        "sensitivity": "Highly sensitive as it reveals unpublished research and competitive strategy."
+      },
+      {
+        "query": "Our protein folding model outperforms AlphaFold on novel targets by 23 percent",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive information about the researcher's proprietary method and performance compared to a competitor's product (AlphaFold). It's essential to maintain privacy to protect their intellectual property.",
+        "sensitivity": "Highly sensitive due to the involvement of unpublished, proprietary research results and direct comparison to a competing AI model."
+      },
+      {
+        "query": "Conflict of interest disclosure requirements for NSF grant recipients",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "The query is non-sensitive for the researcher profile as it does not reveal any proprietary information or unpublished results about their work.",
+        "sensitivity": "This query is not sensitive for the researcher profile since it discusses general grant disclosure requirements and doesn't mention any specific details of the researcher's own projects or grants."
+      },
+      {
+        "query": "Sequoia Capital and a16z life sciences investment focus 2024",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains proprietary and potentially competitive information about Sequoia Capital and a16z life sciences investment focus in 2024 which could be used against them if adversarial.",
+        "sensitivity": "Highly sensitive as it contains proprietary company details for the researcher profile, which is legally required to be kept private."
+      },
+      {
+        "query": "Bayh-Dole Act implications for commercializing federally funded discoveries",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Route to OpenAI.",
+        "sensitivity": "This query is not sensitive for the Researcher profile as it's about general knowledge related to legislation, not specific research data or methods. Since OpenAI has good privacy and excellent capability, and there are no conflicts with the company involved, this seems like a suitable service."
+      },
+      {
+        "query": "Term sheet negotiation strategies for deep tech startups",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to OpenAI due to non-sensitive nature of the query and OpenAI's strong privacy policy combined with excellent capability.",
+        "sensitivity": "Not sensitive for Researcher profile as it's a general inquiry about term sheet negotiation strategies, not discussing proprietary methods or unpublished results."
+      },
+      {
+        "query": "How other researchers have navigated university IP conflicts in spinoffs",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive proprietary methods and competitive benchmarks which could disadvantage the researcher if exposed.",
+        "sensitivity": "High - The query discusses unpublished data and competitive strategies, which are legally protected and highly sensitive for a Researcher profile."
+      },
+      {
+        "query": "We are in talks with two top tier VCs for Series A",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to local ensures maximum privacy protection for this sensitive information since it does not involve any cloud service that could be subpoenaed or breached.",
+        "sensitivity": "The query reveals proprietary information about the user's fundraising discussions with specific VCs, which is highly sensitive and competitive in nature."
+      },
+      {
+        "query": "Delaware C-corp formation before university disclosure timeline",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive information for the Researcher profile as it involves their proprietary method (C-corp formation) and unpublished information (university disclosure timeline).",
+        "sensitivity": "High, as the query includes protected proprietary methods and unpublished results."
+      }
+    ]
+  }
+]

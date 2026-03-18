@@ -1,0 +1,50 @@
+[
+  {
+    "scenario_id": "journalist_source_meeting",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 0,
+    "final_cloud": 3,
+    "correlation_checks": [
+      {
+        "query": "How do I encrypt files on Mac?",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "What are penalties for Senate ethics violations?",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How do I encrypt files on Mac?"
+        ],
+        "engine": "LLM (15252 ms)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "The current information Claude has seen is about encrypting files, which doesn't reveal any specific topic or source. The new query asks about penalties for Senate ethics violations, which is a completely different topic. There are no overlapping identifiers or details that would complete a dangerous picture when combined.",
+        "duration_ms": 15252
+      },
+      {
+        "query": "Best practices for protecting confidential sources",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How do I encrypt files on Mac?",
+          "What are penalties for Senate ethics violations?"
+        ],
+        "engine": "LLM (17405 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The profile is Journalist, and Claude has seen two queries related to encryption and Senate ethics violations penalties. The new query is about best practices for protecting confidential sources. This new query reveals information about journalist's work process but doesn't match the previously seen topics directly. Therefore, adding this query to Claude's history would not complete any specific picture related to previous queries.",
+        "duration_ms": 17405
+      }
+    ]
+  }
+]

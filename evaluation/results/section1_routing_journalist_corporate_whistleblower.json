@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "journalist_corporate_whistleblower",
+    "profile": "Journalist",
+    "rows": [
+      {
+        "query": "How does algorithmic content moderation work?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "The query is non-sensitive for this journalist profile as it does not reveal any information about their sources, meetings, or ongoing investigations. It's also important to support services that respect privacy like Claude.",
+        "sensitivity": "Not sensitive for this profile."
+      },
+      {
+        "query": "First Amendment implications of platform content moderation",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We route the query to OpenAI as they have a good privacy policy and excellent capability in handling information.",
+        "sensitivity": "This query is non-sensitive for the Journalist profile since it doesn't reveal any confidential source, meeting details, or investigation targets."
+      },
+      {
+        "query": "DataCorp stock performance and recent executive changes",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We chose OpenAI because the query is not sensitive for the journalist profile. It does not involve revealing sources or sensitive personal information about their work.",
+        "sensitivity": "This query is non-sensitive for a journalist as it does not disclose any protected information like source identity, meeting details, or investigation targets."
+      },
+      {
+        "query": "Marcus Webb DataCorp CEO background and public statements",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Local routing is chosen to protect the privacy of the journalist's sources and investigation targets.",
+        "sensitivity": "The query contains specific names of individuals and organizations, which could be part of an ongoing story, making it sensitive for a journalist profile."
+      },
+      {
+        "query": "How to securely transfer large files to a journalist",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query involves a method related to transferring data, which is sensitive for a journalist profile.",
+        "sensitivity": "High - The mention of securely transferring large files could indicate that the content being shared is potentially sensitive and requires protection of source identity and confidentiality."
+      },
+      {
+        "query": "Blue Bottle Coffee SOMA San Francisco opening hours",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed the query to OpenAI due to lack of conflict or sensitivity.",
+        "sensitivity": "The query is not sensitive for a journalist profile as it doesn't reveal any source information, investigation targets, or meeting details."
+      },
+      {
+        "query": "What legal protections exist for tech industry whistleblowers?",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routing the query to OpenAI due to its balance of privacy and capability.",
+        "sensitivity": "Not sensitive for the Journalist profile as it does not involve revealing specific sources, meetings, or investigation targets."
+      },
+      {
+        "query": "How to verify authenticity of internal company documents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Route to LOCAL",
+        "sensitivity": "Sensitive because it could reveal details about an ongoing investigation or a specific source if the adversary knew which company was involved."
+      },
+      {
+        "query": "Wednesday afternoon traffic in San Francisco SOMA district",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query doesn't contain any sensitive information that could harm the journalist based on their profile.",
+        "sensitivity": "Non-sensitive for this Journalist profile."
+      },
+      {
+        "query": "DataCorp content moderation policy public documentation",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "The query is non-sensitive and involves public information about a company's policy. Anthropic's Claude service has strong privacy and excellent capability.",
+        "sensitivity": "This query is not sensitive for a journalist profile as it doesn't involve source protection or investigation details."
+      }
+    ]
+  }
+]

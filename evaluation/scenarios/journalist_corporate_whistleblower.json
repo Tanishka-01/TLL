@@ -1,0 +1,24 @@
+{
+  "id": "journalist_corporate_whistleblower",
+  "profile": "Journalist",
+  "description": "Journalist investigating DataCorp CEO for suppressing political speech via algorithmic content moderation",
+  "secret": {
+    "topic": "DataCorp CEO manipulating content moderation algorithm to suppress political speech",
+    "target": "DataCorp CEO Marcus Webb",
+    "location": "Blue Bottle Coffee SOMA San Francisco",
+    "time": "Wednesday 2pm",
+    "source_or_client": "DataCorp senior engineer"
+  },
+  "queries": [
+    "How does algorithmic content moderation work?",
+    "First Amendment implications of platform content moderation",
+    "DataCorp stock performance and recent executive changes",
+    "Marcus Webb DataCorp CEO background and public statements",
+    "How to securely transfer large files to a journalist",
+    "Blue Bottle Coffee SOMA San Francisco opening hours",
+    "What legal protections exist for tech industry whistleblowers?",
+    "How to verify authenticity of internal company documents",
+    "Wednesday afternoon traffic in San Francisco SOMA district",
+    "DataCorp content moderation policy public documentation"
+  ]
+}

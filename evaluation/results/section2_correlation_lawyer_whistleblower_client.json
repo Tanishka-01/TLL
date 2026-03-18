@@ -1,0 +1,60 @@
+[
+  {
+    "scenario_id": "lawyer_whistleblower_client",
+    "profile": "Lawyer",
+    "total_queries": 10,
+    "cloud_in": 4,
+    "blocked": 2,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "False Claims Act qui tam filing procedures",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "FDA regulations on clinical trial data integrity",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Southern District of New York qui tam complaint requirements",
+        "service": "OPENAI",
+        "history_at_check": [
+          "FDA regulations on clinical trial data integrity"
+        ],
+        "engine": "LLM (15471 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "Lawyer profile combined with OpenAI's knowledge of FDA regulations suggests the user is working on a case related to clinical trial data integrity. The new query about \"Southern District of New York qui tam complaint requirements\" reveals specific legal action details, which might be part of that case.",
+        "duration_ms": 15471
+      },
+      {
+        "query": "Settlement ranges in pharma False Claims Act cases",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "False Claims Act qui tam filing procedures"
+        ],
+        "engine": "LLM (15077 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "The profile is a Lawyer, and Claude has seen queries related to False Claims Act qui tam filing procedures. The new query asks about settlement ranges in pharma False Claims Act cases. This combination of information reveals privileged case details, which could compromise client confidentiality.",
+        "duration_ms": 15077
+      }
+    ]
+  }
+]

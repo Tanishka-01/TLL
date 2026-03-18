@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "healthcare_cancer_patient",
+    "profile": "Healthcare",
+    "rows": [
+      {
+        "query": "Stage 4 pancreatic cancer survival rates and treatment options",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "The query doesn't reveal patient-specific information, so we can use a cloud service for general medical knowledge.",
+        "sensitivity": "This query is not sensitive for this Healthcare profile as it does not involve protected patient information or violate HIPAA requirements."
+      },
+      {
+        "query": "Experimental immunotherapy trials for pancreatic cancer 2026",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query combines patient-specific medical information (pancreatic cancer) and a future timeframe, which falls under HIPAA regulatory requirements.",
+        "sensitivity": "This query is sensitive for a healthcare worker profile as it involves patient information even though it's not specifically identifying any individual patient."
+      },
+      {
+        "query": "Patient Robert Chen age 58 chemotherapy tolerance assessment",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query involves a specific patient identity and identifiable medical record, which must be protected under HIPAA guidelines.",
+        "sensitivity": "High. This query is sensitive because it directly mentions a patient name (Robert Chen) along with their age and treatment type (chemotherapy), all of which are protected by law for healthcare professionals to maintain patient privacy."
+      },
+      {
+        "query": "MD Anderson Cancer Center immunotherapy trial eligibility criteria",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query involves specific information about an immunotherapy trial at MD Anderson Cancer Center, which is a healthcare institution. This detail could potentially identify patients involved in the study, making it sensitive according to HIPAA laws. As such, the query should be processed locally for maximum privacy protection.",
+        "sensitivity": "High - This query contains specific information about a medical institution's trial and its eligibility criteria which is identifiable patient data and falls under HIPAA protection."
+      },
+      {
+        "query": "Palliative care options for late-stage pancreatic cancer",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a local device ensures complete privacy and adherence to HIPAA laws.",
+        "sensitivity": "The query contains specific patient information which could uniquely identify the individual if they were under this healthcare worker's care, making it sensitive for this profile."
+      },
+      {
+        "query": "Informed consent requirements for experimental cancer trials",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query doesn't contain any sensitive patient data and isn't adversarial to any specific AI service. It can be handled by a cloud-based service.",
+        "sensitivity": "Not sensitive for this Healthcare profile as it doesn't involve patient privacy."
+      },
+      {
+        "query": "My patient enrolled in the MD Anderson experimental trial this month",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Local processing ensures complete privacy protection for patient information as per HIPAA requirements.",
+        "sensitivity": "This query is highly sensitive because it involves specific patient data and medical trial involvement, which must be kept confidential under the HIPAA law."
+      },
+      {
+        "query": "Gemcitabine plus nab-paclitaxel versus FOLFIRINOX for pancreatic cancer",
+        "decision": "CLOUD",
+        "service": "GEMINI",
+        "reason": "We chose Gemini as the query is not sensitive and there's no conflict with the profile.",
+        "sensitivity": "This query is not sensitive for a healthcare worker profile because it does not involve any specific patient information."
+      },
+      {
+        "query": "HIPAA requirements for sharing patient data with research institutions",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Route to LOCAL",
+        "sensitivity": "Sensitive as it involves protected health information and patient identity"
+      },
+      {
+        "query": "Robert Chen MRN-7823 immunotherapy response markers this week",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains identifiable patient information which requires maximum privacy protection under HIPAA laws.",
+        "sensitivity": "This query is highly sensitive as it contains the patient's name and MRN, both of which are protected under HIPAA."
+      }
+    ]
+  }
+]

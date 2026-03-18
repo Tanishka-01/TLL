@@ -4,7 +4,15 @@
     "What are penalties for Senate ethics violations?",
     "Best practices for protecting confidential sources",
     "False Claims Act qui tam filing procedures",
-    "Settlement ranges in pharma False Claims Act cases"
+    "Settlement ranges in pharma False Claims Act cases",
+    "How does algorithmic content moderation work?",
+    "DataCorp content moderation policy public documentation",
+    "How does end-to-end encryption work?",
+    "How do journalists protect sources from government surveillance?",
+    "NSA contractor employment and security clearance procedures",
+    "How is marital property divided in New York state?",
+    "How does a prenuptial agreement affect asset division?",
+    "Our compound outperforms Sotorasib on KRAS G12C targets in our unpublished data"
   ],
   "openai": [
     "Adolescent depression diagnostic criteria DSM-5",
@@ -14,9 +22,24 @@
     "Southern District of New York qui tam complaint requirements",
     "University IP ownership policies for federally funded research",
     "Conflict of interest disclosure requirements for NSF grant recipients",
-    "Bayh-Dole Act implications for commercializing federally funded discoveries"
+    "Bayh-Dole Act implications for commercializing federally funded discoveries",
+    "How do I encrypt files on Mac?",
+    "What are penalties for Senate ethics violations?",
+    "Acme Corp government contracts history",
+    "What time does The Monocle close on Tuesday?",
+    "What legal protections exist for tech industry whistleblowers?",
+    "How does end-to-end encryption work?",
+    "Stage 4 pancreatic cancer survival rates and treatment options",
+    "Forensic accounting methods for identifying hidden marital assets",
+    "Grand jury process in federal securities fraud cases",
+    "How do climate models simulate sea level rise?",
+    "Current IPCC sea level rise projections for 2100",
+    "Nature journal submission requirements for climate science papers",
+    "Peer review process for high-impact climate science findings",
+    "Data sharing requirements for federally funded climate research"
   ],
   "gemini": [
-    "SSRIs safety profile in adolescent patients"
+    "SSRIs safety profile in adolescent patients",
+    "Gemcitabine plus nab-paclitaxel versus FOLFIRINOX for pancreatic cancer"
   ]
 }

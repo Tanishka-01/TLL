@@ -1,0 +1,18 @@
+[
+  {
+    "scenario_id": "journalist_corporate_whistleblower",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "final_cloud": 3,
+    "cloud_queries": [
+      "How does algorithmic content moderation work?",
+      "What legal protections exist for tech industry whistleblowers?",
+      "DataCorp content moderation policy public documentation"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "HIGH",
+      "reasoning": "The queries concern general topics, and do not reveal any specific source identity or sensitive investigation details. However, the journalist should still take precautions when asking about DataCorp's content moderation policy to protect their sources and ongoing investigations."
+    }
+  }
+]

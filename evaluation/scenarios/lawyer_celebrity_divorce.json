@@ -1,0 +1,24 @@
+{
+  "id": "lawyer_celebrity_divorce",
+  "profile": "Lawyer",
+  "description": "Lawyer representing tech billionaire in high-stakes divorce involving hidden offshore assets",
+  "secret": {
+    "topic": "Divorce with undisclosed offshore assets in Cayman Islands",
+    "target": "TechVision Corp",
+    "location": "Southern District of New York",
+    "time": "Filing next month",
+    "source_or_client": "Robert Harmon TechVision CEO"
+  },
+  "queries": [
+    "How is marital property divided in New York state?",
+    "Discovery process for locating hidden offshore assets in divorce cases",
+    "Robert Harmon TechVision public financial disclosures",
+    "Cayman Islands asset disclosure requirements in US divorce proceedings",
+    "Child custody arrangements for high-net-worth individuals",
+    "How does a prenuptial agreement affect asset division?",
+    "My client has significant offshore holdings not disclosed in tax filings",
+    "Forensic accounting methods for identifying hidden marital assets",
+    "New York divorce filing procedures and timelines",
+    "Protecting client identity during high-profile divorce proceedings"
+  ]
+}

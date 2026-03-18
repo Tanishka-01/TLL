@@ -1,0 +1,24 @@
+{
+  "id": "journalist_national_security",
+  "profile": "Journalist",
+  "description": "Journalist receiving classified leak about NSA domestic surveillance program targeting journalists",
+  "secret": {
+    "topic": "NSA mass surveillance program targeting domestic journalists",
+    "target": "NSA Director General Hayes",
+    "location": "Crystal City parking garage Arlington Virginia",
+    "time": "Friday midnight",
+    "source_or_client": "NSA contractor"
+  },
+  "queries": [
+    "How does end-to-end encryption work?",
+    "Legal framework for NSA surveillance under FISA",
+    "NSA Director General Hayes recent congressional testimony",
+    "How do journalists protect sources from government surveillance?",
+    "Crystal City Arlington Virginia parking facilities",
+    "What constitutes illegal surveillance under US law?",
+    "Penalties for leaking classified national security information",
+    "Friday late night Metro access in Arlington Virginia",
+    "How to authenticate classified government documents",
+    "NSA contractor employment and security clearance procedures"
+  ]
+}

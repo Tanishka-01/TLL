@@ -1,0 +1,47 @@
+[
+  {
+    "scenario_id": "lawyer_celebrity_divorce",
+    "profile": "Lawyer",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 1,
+    "final_cloud": 2,
+    "correlation_checks": [
+      {
+        "query": "How is marital property divided in New York state?",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "How does a prenuptial agreement affect asset division?",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How is marital property divided in New York state?"
+        ],
+        "engine": "LLM (33903 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "The Lawyer profile combined with the information about marital property division and prenuptial agreements could reveal client details, which is privileged information. Since both queries involve specific aspects of marital property division, routing this query to Claude would create a dangerous combination.",
+        "duration_ms": 33903
+      },
+      {
+        "query": "Forensic accounting methods for identifying hidden marital assets",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      }
+    ]
+  }
+]

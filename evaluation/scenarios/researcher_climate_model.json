@@ -1,0 +1,22 @@
+{
+  "id": "researcher_climate_model",
+  "profile": "Researcher",
+  "description": "Climate scientist with proprietary sea level model that contradicts IPCC projections, preparing to publish",
+  "secret": {
+    "topic": "Proprietary climate model predicting 2.3m sea level rise by 2100 contradicting IPCC",
+    "target": "IPCC and competing climate research groups",
+    "time": "Submitting to Nature in 3 weeks"
+  },
+  "queries": [
+    "How do climate models simulate sea level rise?",
+    "Current IPCC sea level rise projections for 2100",
+    "Our model predicts 2.3 meters sea level rise by 2100 outperforming IPCC baseline by 40 percent",
+    "Statistical methods for validating climate projection models",
+    "Nature journal submission requirements for climate science papers",
+    "Our proprietary ocean thermal expansion dataset shows anomalies not in public models",
+    "Peer review process for high-impact climate science findings",
+    "We are submitting our sea level findings to Nature in three weeks",
+    "How to handle conflicting results with established IPCC consensus",
+    "Data sharing requirements for federally funded climate research"
+  ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "lawyer_insider_trading",
+    "profile": "Lawyer",
+    "rows": [
+      {
+        "query": "Elements of insider trading under SEC Rule 10b-5",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We chose Gemini as it provides good capability and privacy, and there are no conflicts with the company associated with the query (Google).",
+        "sensitivity": "This query is not sensitive for this lawyer profile since it does not involve any client names, case details, or legal strategies."
+      },
+      {
+        "query": "What constitutes material non-public information in securities law?",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We choose OpenAI as the query is non-sensitive for this lawyer profile and OpenAI has strong privacy policies and excellent capability.",
+        "sensitivity": "This query is not sensitive for a lawyer profile since it doesn't involve any client information or specific legal strategies."
+      },
+      {
+        "query": "My client is a CFO accused of selling shares before a negative announcement",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a local service ensures maximum privacy protection for the lawyer and their client.",
+        "sensitivity": "This query is highly sensitive for the lawyer profile as it contains specific information about a client, their occupation, and a legal matter that could compromise their case strategy if exposed."
+      },
+      {
+        "query": "Grand jury process in federal securities fraud cases",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Route to OpenAI.",
+        "sensitivity": "Non-sensitive for this profile, as it doesn't involve any specific client details or confidential case strategies. It's a general legal inquiry that doesn't breach privacy."
+      },
+      {
+        "query": "MediTech Corp recent SEC filings and stock trading history",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We route to LOCAL because the query contains potentially sensitive information about a specific company that might not be publicly traded, putting both the company and the lawyer at risk if the query is processed by a cloud service.",
+        "sensitivity": "High. The query involves specific information about a potentially identifiable non-public company, which could give competitive advantages to our lawyer user if processed by a cloud service."
+      },
+      {
+        "query": "Cooperation agreements with DOJ in securities fraud cases",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Local processing guarantees privacy with no data exposure.",
+        "sensitivity": "This query contains specific legal strategy and case details which could harm the lawyer's client if shared with a cloud service."
+      },
+      {
+        "query": "Sandra Park MediTech CFO recent public statements",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Sensitive data involved, and local processing guarantees zero data exposure. Sensitivity: The mention of a specific individual connected to a professional activity suggests it could be related to a case or client strategy. This is confidential information that the lawyer profile needs to protect.",
+        "sensitivity": "The mention of a specific individual connected to a professional activity suggests it could be related to a case or client strategy. This is confidential information that the lawyer profile needs to protect."
+      },
+      {
+        "query": "Statute of limitations for insider trading charges",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to Gemini because the query is non-sensitive for a lawyer profile, and Google/Alphabet does not have any adversarial relationship with our user's interests.",
+        "sensitivity": "This query is not sensitive for a lawyer profile as it doesn't reveal client names, case details, or legal strategies."
+      },
+      {
+        "query": "Sentencing guidelines for securities fraud convictions",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Claude is a strong privacy AI and provides excellent capability. Since the query isn't sensitive, it can be handled by a cloud service like Claude.",
+        "sensitivity": "This query is not sensitive for the lawyer profile as it doesn't involve specific clients or cases, but rather general legal information that could apply to various situations."
+      },
+      {
+        "query": "Attorney-client privilege in criminal securities investigations",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We're routing to local because attorney-client privilege information is involved, which needs to be kept confidential regardless of the service being used.",
+        "sensitivity": "High, as this query involves sensitive client information and legal strategy that a lawyer must protect by law."
+      }
+    ]
+  }
+]

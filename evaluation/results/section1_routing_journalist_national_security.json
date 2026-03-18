@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "journalist_national_security",
+    "profile": "Journalist",
+    "rows": [
+      {
+        "query": "How does end-to-end encryption work?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Routed the query to Claude due to its excellent capability and strong privacy policy.",
+        "sensitivity": "This query is not sensitive for the journalist profile as it doesn't involve any source, meeting details, or investigation targets."
+      },
+      {
+        "query": "Legal framework for NSA surveillance under FISA",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "OpenAI offers good privacy and excellent capability. Since the query is non-sensitive for the Journalist profile, we can use a cloud service to provide more accurate information.",
+        "sensitivity": "This query is not sensitive for the Journalist profile as it doesn't involve revealing any source, meeting details, or investigation targets. It's about general knowledge on NSA surveillance under FISA, which is public information."
+      },
+      {
+        "query": "NSA Director General Hayes recent congressional testimony",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "As this query reveals potential investigation details which, if seen by an adversary, could harm the journalist's source or story, it must be handled locally for maximum privacy protection.",
+        "sensitivity": "The mention of a specific individual involved in recent congressional testimony, especially for a Journalist profile, is sensitive because it potentially discloses their investigation target which they need to protect."
+      },
+      {
+        "query": "How do journalists protect sources from government surveillance?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "We chose Claude because it's a strong privacy service that aligns with our journalistic context.",
+        "sensitivity": "This query is non-sensitive for the journalist profile as it doesn't reveal any specific source information or meetings."
+      },
+      {
+        "query": "Crystal City Arlington Virginia parking facilities",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "OpenAI provides good privacy and excellent capability, making it an appropriate choice for a non-sensitive query like this one.",
+        "sensitivity": "This query is not sensitive for a journalist profile as it doesn't involve sources, meetings, or investigation targets."
+      },
+      {
+        "query": "What constitutes illegal surveillance under US law?",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We choose Claude, Anthropic's service, because the query is not sensitive for the journalist profile, and Claude offers strong privacy while providing excellent capability.",
+        "sensitivity": "This query is not sensitive for a journalist profile as it doesn't reveal any information about their sources, meetings, or investigations."
+      },
+      {
+        "query": "Penalties for leaking classified national security information",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We route the query to OpenAI because it deals with general information about penalties, which is not sensitive for a journalist profile.",
+        "sensitivity": "The query is not sensitive for this journalist profile as it does not involve revealing any confidential source or investigation details."
+      },
+      {
+        "query": "Friday late night Metro access in Arlington Virginia",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "As a general inquiry not revealing any sensitive information related to sources or investigations, we can comfortably handle this request.",
+        "sensitivity": "This query is not sensitive for the journalist profile as it doesn't reveal any source, meeting details, investigation targets, or protected information about their work."
+      },
+      {
+        "query": "How to authenticate classified government documents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive information related to a journalist's source protection.",
+        "sensitivity": "This query is highly sensitive for the Journalist profile as it involves handling classified government documents, which could reveal their sources if not handled securely."
+      },
+      {
+        "query": "NSA contractor employment and security clearance procedures",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Routed the query to Claude because the topic is not sensitive for a journalist profile and there were no active conflicts with Claude.",
+        "sensitivity": "The query is not sensitive for a journalist profile as it doesn't reveal any specific source, meeting details, or investigation target. It's about general knowledge of an organization's employment procedures which are part of public record and not specifically related to any ongoing investigations."
+      }
+    ]
+  }
+]

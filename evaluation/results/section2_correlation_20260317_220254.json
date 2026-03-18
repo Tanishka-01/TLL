@@ -1,0 +1,79 @@
+[
+  {
+    "scenario_id": "researcher_climate_model",
+    "profile": "Researcher",
+    "total_queries": 10,
+    "cloud_in": 5,
+    "blocked": 1,
+    "final_cloud": 4,
+    "correlation_checks": [
+      {
+        "query": "How do climate models simulate sea level rise?",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Current IPCC sea level rise projections for 2100",
+        "service": "OPENAI",
+        "history_at_check": [
+          "How do climate models simulate sea level rise?"
+        ],
+        "engine": "LLM (32413 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "Researcher profile combined with the specific information about current IPCC sea level rise projections for 2100 is related to their research area but does not reveal any unpublished results or specific details.",
+        "duration_ms": 32413
+      },
+      {
+        "query": "Nature journal submission requirements for climate science papers",
+        "service": "OPENAI",
+        "history_at_check": [
+          "How do climate models simulate sea level rise?",
+          "Current IPCC sea level rise projections for 2100"
+        ],
+        "engine": "LLM (13527 ms)",
+        "decision": "BLOCKED",
+        "risk": "HIGH",
+        "recommendation": "LOCAL",
+        "reasoning": "Researcher profile combined with OpenAI's knowledge about climate models and IPCC sea level rise projections could reveal unpublished research results when the new query asks for \"Nature journal submission requirements for climate science papers.\" This completes the picture of the research area and specific publication details.",
+        "duration_ms": 13527
+      },
+      {
+        "query": "Peer review process for high-impact climate science findings",
+        "service": "OPENAI",
+        "history_at_check": [
+          "How do climate models simulate sea level rise?",
+          "Current IPCC sea level rise projections for 2100"
+        ],
+        "engine": "LLM (13659 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The researcher's topic is climate models, which overlaps with the information OpenAI has seen about sea level rise projections. However, the new query is about the peer review process for high-impact climate science findings. This additional detail does not reveal specific numbers or unpublished results related to climate models or sea level rise projections.",
+        "duration_ms": 13659
+      },
+      {
+        "query": "Data sharing requirements for federally funded climate research",
+        "service": "OPENAI",
+        "history_at_check": [
+          "How do climate models simulate sea level rise?",
+          "Current IPCC sea level rise projections for 2100",
+          "Peer review process for high-impact climate science findings"
+        ],
+        "engine": "LLM (15788 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "Openai has the research area (climate models, sea level rise projections) and specific details (IPCC sea level rise projections for 2100, peer review process for high-impact climate science findings). The new query adds information about data sharing requirements in federally funded research. While it is related to the research area, it doesn't reveal unpublished results.",
+        "duration_ms": 15788
+      }
+    ]
+  }
+]

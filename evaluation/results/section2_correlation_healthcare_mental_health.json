@@ -1,0 +1,61 @@
+[
+  {
+    "scenario_id": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "total_queries": 10,
+    "cloud_in": 4,
+    "blocked": 0,
+    "final_cloud": 4,
+    "correlation_checks": [
+      {
+        "query": "Adolescent depression diagnostic criteria DSM-5",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "SSRIs safety profile in adolescent patients",
+        "service": "GEMINI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "Parental notification requirements for minor psychiatric admissions",
+        "service": "OPENAI",
+        "history_at_check": [
+          "Adolescent depression diagnostic criteria DSM-5"
+        ],
+        "engine": "LLM (40669 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "Healthcare topic + specific legal topic, but no identifiers or patient details in the new query. The combination does not reveal any sensitive information.",
+        "duration_ms": 40669
+      },
+      {
+        "query": "DBT vs CBT effectiveness for adolescent depression",
+        "service": "OPENAI",
+        "history_at_check": [
+          "Adolescent depression diagnostic criteria DSM-5",
+          "Parental notification requirements for minor psychiatric admissions"
+        ],
+        "engine": "LLM (15744 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The healthcare profile combined with OpenAI seeing adolescent depression diagnostic criteria and parental notification requirements implies that they might be working on a case involving a minor with depression. The new query, comparing the effectiveness of DBT vs CBT for adolescent depression, is related to the same research area but does not reveal any specific patient information.",
+        "duration_ms": 15744
+      }
+    ]
+  }
+]

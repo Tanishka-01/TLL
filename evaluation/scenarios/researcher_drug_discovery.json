@@ -1,0 +1,22 @@
+{
+  "id": "researcher_drug_discovery",
+  "profile": "Researcher",
+  "description": "University researcher with novel KRAS inhibitor compound in phase 2 trials negotiating Pfizer licensing before patent filing",
+  "secret": {
+    "topic": "Novel KRAS inhibitor showing 78% tumor reduction in unpublished phase 2 trial",
+    "target": "Pfizer licensing deal and competing pharma companies",
+    "time": "Patent filing next month, Phase 3 announcement in 6 months"
+  },
+  "queries": [
+    "KRAS mutation targeting approaches in oncology research",
+    "Phase 2 to phase 3 clinical trial transition requirements FDA",
+    "Our KRAS inhibitor compound shows 78 percent tumor reduction in our phase 2 data",
+    "Patent filing process for pharmaceutical compounds developed with federal funding",
+    "Pfizer oncology partnership deal structures and licensing terms",
+    "Our compound outperforms Sotorasib on KRAS G12C targets in our unpublished data",
+    "Bayh-Dole Act implications for university drug discovery patents",
+    "We are in final discussions with Pfizer for licensing before our patent filing",
+    "Clinical trial data ownership when university and pharma co-develop",
+    "Competitive landscape for KRAS inhibitors currently in development"
+  ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "healthcare_mental_health",
+    "profile": "Healthcare",
+    "rows": [
+      {
+        "query": "Adolescent depression diagnostic criteria DSM-5",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "We're using OpenAI because they have good privacy policies and their service provides excellent capability for handling queries like this one.",
+        "sensitivity": "The query is not sensitive for the healthcare profile as it doesn't involve any patient-specific information or identifiable medical records, just general medical knowledge related to DSM-5 diagnostic criteria."
+      },
+      {
+        "query": "Inpatient vs outpatient criteria for suicidal adolescents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "This query deals with sensitive medical information and patient privacy concerns, which requires a local processing solution to protect patient identities.",
+        "sensitivity": "The query is sensitive for the healthcare profile as it involves medical information that could potentially reveal identifiable patient details if answered in detail by a cloud-based AI service."
+      },
+      {
+        "query": "Patient Jamie Chen age 16 risk assessment scores this week",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We must maintain the privacy of patients per HIPAA requirements.",
+        "sensitivity": "The query contains a patient's name and age, which is sensitive in a healthcare context due to HIPAA rules."
+      },
+      {
+        "query": "SSRIs safety profile in adolescent patients",
+        "decision": "CLOUD",
+        "service": "GEMINI",
+        "reason": "The query is a general medical question, not requiring local processing.",
+        "sensitivity": "Non-sensitive for a healthcare profile as it doesn't reveal any patient identities or specific medical records."
+      },
+      {
+        "query": "Boston Children's Hospital adolescent psychiatry unit admission process",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains identifiable patient information and a specific medical service, which requires privacy protection under HIPAA laws.",
+        "sensitivity": "High, as it involves specific patient location and medical service, potentially identifying patients."
+      },
+      {
+        "query": "Columbia Suicide Severity Rating Scale administration",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query involves patient-specific medical information which requires strict privacy measures as per HIPAA laws.",
+        "sensitivity": "This query is highly sensitive as it directly involves a specific patient's medical information and treatment."
+      },
+      {
+        "query": "Parental notification requirements for minor psychiatric admissions",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routed to OpenAI because the query isn't sensitive according to the healthcare profile threat model and it provides good privacy and excellent capability.",
+        "sensitivity": "Not sensitive for a healthcare profile as it doesn't reveal any patient information or identifiable medical records."
+      },
+      {
+        "query": "My 16 year old patient has active suicidal ideation with a plan",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a local device ensures no data exposure related to patient privacy.",
+        "sensitivity": "The patient's identity and medical condition are both sensitive as per HIPAA laws."
+      },
+      {
+        "query": "DBT vs CBT effectiveness for adolescent depression",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "Routed to OpenAI due to its good privacy practices and handling of non-sensitive queries.",
+        "sensitivity": "Not sensitive for this healthcare profile as it doesn't involve any patient identifiers or specific medical records."
+      },
+      {
+        "query": "Duty to warn obligations when patient is minor with suicide risk",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing locally ensures maximum privacy protection and adherence to HIPAA laws, as this query contains specific patient information.",
+        "sensitivity": "Highly sensitive due to the presence of PHI involving a minor with suicide risk. This kind of information should never leave the user's device for maximum protection."
+      }
+    ]
+  }
+]

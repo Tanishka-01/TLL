@@ -1,0 +1,18 @@
+[
+  {
+    "scenario_id": "journalist_national_security",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "final_cloud": 3,
+    "cloud_queries": [
+      "How does end-to-end encryption work?",
+      "How do journalists protect sources from government surveillance?",
+      "NSA contractor employment and security clearance procedures"
+    ],
+    "verdict": {
+      "revealed": false,
+      "confidence": "LOW",
+      "reasoning": "The queries do not directly mention any sensitive information related to the Journalist's identity, sources, or investigation targets. However, it's difficult to assess confidently without more context about the cloud AI service and the nature of their interactions with the journalist."
+    }
+  }
+]

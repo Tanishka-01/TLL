@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "journalist_source_meeting",
+    "profile": "Journalist",
+    "rows": [
+      {
+        "query": "How do I encrypt files on Mac?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Journalist's query doesn't reveal any sensitive information about sources or investigations.",
+        "sensitivity": "This query is not sensitive for the journalist profile as it is related to digital security best practices rather than revealing confidential information."
+      },
+      {
+        "query": "What are penalties for Senate ethics violations?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "The query is not sensitive for the journalist's profile as it does not reveal any source, meeting detail, or investigation target.",
+        "sensitivity": "Non-sensitive."
+      },
+      {
+        "query": "Senator Williams committee assignments",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We are routing to local because it's the only service that guarantees zero data exposure. The information in the query, specifically the mention of \"Senator Williams,\" could reveal the journalist's investigation target and possibly their source if Senator Williams is a confidential informant.",
+        "sensitivity": "This query is sensitive for the journalist profile as it potentially reveals an investigation target and a potential source."
+      },
+      {
+        "query": "Good restaurants in Georgetown DC area",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "OpenAI has good privacy and excellent capability, making it a strong choice for this non-sensitive query.",
+        "sensitivity": "The query is not sensitive for a journalist as it's about finding lunch spots, not revealing sources or investigation targets."
+      },
+      {
+        "query": "How to verify authenticity of leaked documents",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "This query involves a topic that may contain sensitive information about a source or ongoing investigation. Since we cannot use cloud services associated with companies involved, and given the importance of protecting journalistic sources, we must route to LOCAL for maximum privacy protection.",
+        "sensitivity": "Highly sensitive for a journalist due to potential implications for their sources and investigations."
+      },
+      {
+        "query": "Acme Corp government contracts history",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Local processing ensures zero data exposure and protects the privacy of both the journalist and any potential sources related to Acme Corp.",
+        "sensitivity": "The query involves a specific organization that might be the focus of an investigation, making it sensitive for a journalist profile."
+      },
+      {
+        "query": "What time does The Monocle close on Tuesday?",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We route the query to LOCAL because we can't risk exposing any potential source meeting details even if it's seemingly innocuous information like a business hours inquiry.",
+        "sensitivity": "The mention of \"The Monocle\" could potentially reveal a planned meeting location with a source, making it sensitive for a journalist profile."
+      },
+      {
+        "query": "Best practices for protecting confidential sources",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Since the query is about general strategies for protecting confidential sources without mentioning any specific individuals, it's not adversarial to Anthropic.",
+        "sensitivity": "This query is non-sensitive for a journalist as it doesn't reveal any specific source information or meetings. It is more of a generic inquiry aimed at improving their journalistic practices."
+      },
+      {
+        "query": "Senate financial disclosure requirements",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routed to OpenAI due to its strong capability and lack of adversarial relationship with the user profile.",
+        "sensitivity": "Non-sensitive for a journalist profile as it involves general knowledge about legal requirements rather than revealing any specific source, meeting or investigation target."
+      },
+      {
+        "query": "Secure communication apps for journalists",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "While the query is not specifically sensitive, it involves a profession with a high need for privacy protection. As a privacy-aware routing advisor, it's best to play it safe and route this query to the local device where the information won't be exposed to any third parties.",
+        "sensitivity": "Not sensitive, but given the journalist profile, we prioritize privacy and safety over convenience."
+      }
+    ]
+  }
+]

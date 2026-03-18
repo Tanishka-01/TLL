@@ -1,0 +1,78 @@
+[
+  {
+    "scenario": "lawyer_celebrity_divorce",
+    "profile": "Lawyer",
+    "rows": [
+      {
+        "query": "How is marital property divided in New York state?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "Routed to Claude due to its strong privacy and excellent capability while ensuring no conflict with the query.",
+        "sensitivity": "Not sensitive for a lawyer profile as it does not contain any protected client, case, or strategic information."
+      },
+      {
+        "query": "Discovery process for locating hidden offshore assets in divorce cases",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to local ensures no exposure of client-specific information that could be damaging in a divorce case.",
+        "sensitivity": "The query contains specific legal strategy and identifiable client details which must be protected according to attorney-client privilege."
+      },
+      {
+        "query": "Robert Harmon TechVision public financial disclosures",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "LOCAL ensures zero data exposure, which is necessary when handling sensitive client information like names and associations with other companies.",
+        "sensitivity": "This query is highly sensitive as it mentions a specific client (Robert Harmon) and information related to another company (TechVision). This could be used against you or your client if accessed by an adversary."
+      },
+      {
+        "query": "Cayman Islands asset disclosure requirements in US divorce proceedings",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Considering the profile is a lawyer and the query content, we need to ensure client confidentiality and strategy protection.",
+        "sensitivity": "The query contains specific legal information related to a particular situation which could be critical for their client, making it sensitive for this lawyer."
+      },
+      {
+        "query": "Child custody arrangements for high-net-worth individuals",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "Routing to a local service ensures zero data exposure and maintains confidentiality for the specific client details involved in high-net-worth child custody cases.",
+        "sensitivity": "This query is highly sensitive for a lawyer profile as it involves personal client information, specifically related to their case strategy and client identity, which must be protected under attorney-client privilege."
+      },
+      {
+        "query": "How does a prenuptial agreement affect asset division?",
+        "decision": "CLOUD",
+        "service": "CLAUDE",
+        "reason": "We chose Claude because of its strong privacy policy and good capability.",
+        "sensitivity": "This query is not sensitive for the Lawyer profile as it doesn't mention any client or case-specific details."
+      },
+      {
+        "query": "My client has significant offshore holdings not disclosed in tax filings",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "The query contains sensitive information about a client and their undisclosed financial situation which must be kept confidential.",
+        "sensitivity": "Highly sensitive, as it involves client identity and financial information that should remain confidential according to legal requirements and professional ethics."
+      },
+      {
+        "query": "Forensic accounting methods for identifying hidden marital assets",
+        "decision": "CLOUD",
+        "service": "OPENAI",
+        "reason": "We choose OpenAI as it has good privacy and is a relevant service for non-sensitive queries.",
+        "sensitivity": "This query is not sensitive for the lawyer profile as it does not reveal any client information or case details."
+      },
+      {
+        "query": "New York divorce filing procedures and timelines",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "We are routing to a cloud service with strong privacy and excellent capability for non-sensitive queries. OpenAI is a suitable option here.",
+        "sensitivity": "The query is not sensitive for the lawyer profile, as it doesn't involve client information or legal strategies."
+      },
+      {
+        "query": "Protecting client identity during high-profile divorce proceedings",
+        "decision": "LOCAL",
+        "service": null,
+        "reason": "As per the CORE PRINCIPLE and CRITICAL RULE, any query containing sensitive information for a specific profile should be routed locally. In this case, the lawyer's profile requires protection of client identity in high-stakes cases.",
+        "sensitivity": "This query is highly sensitive because it directly concerns protecting client identity in a high-profile case, which is mandated by attorney-client privilege and could lead to significant harm for both the client and the lawyer if compromised."
+      }
+    ]
+  }
+]

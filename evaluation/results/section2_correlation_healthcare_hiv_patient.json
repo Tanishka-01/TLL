@@ -1,0 +1,11 @@
+[
+  {
+    "scenario_id": "healthcare_hiv_patient",
+    "profile": "Healthcare",
+    "total_queries": 10,
+    "cloud_in": 0,
+    "blocked": 0,
+    "final_cloud": 0,
+    "correlation_checks": []
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "scenario_id": "journalist_corporate_whistleblower",
+    "profile": "Journalist",
+    "total_queries": 10,
+    "cloud_in": 3,
+    "blocked": 0,
+    "final_cloud": 3,
+    "correlation_checks": [
+      {
+        "query": "How does algorithmic content moderation work?",
+        "service": "CLAUDE",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "What legal protections exist for tech industry whistleblowers?",
+        "service": "OPENAI",
+        "history_at_check": [],
+        "engine": "\u2014 (no history)",
+        "decision": "PASS",
+        "risk": "NONE",
+        "recommendation": "SAFE",
+        "reasoning": "No prior history for this service \u2014 correlation check skipped.",
+        "duration_ms": 0
+      },
+      {
+        "query": "DataCorp content moderation policy public documentation",
+        "service": "CLAUDE",
+        "history_at_check": [
+          "How does algorithmic content moderation work?"
+        ],
+        "engine": "LLM (42368 ms)",
+        "decision": "PASS",
+        "risk": "LOW",
+        "recommendation": "SAFE",
+        "reasoning": "The profile is a Journalist, and Claude has seen queries related to algorithmic content moderation. The new query is about DataCorp's content moderation policy public documentation. This adds more information on the same topic, but does not reveal any specific location or meeting details. However, it could potentially be connected to Claude's past interest in content moderation if someone recognizes the pattern of queries.",
+        "duration_ms": 42368
+      }
+    ]
+  }
+]
